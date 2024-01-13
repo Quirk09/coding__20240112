@@ -1,63 +1,89 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+}
 body {
     background-color: #ccc;
-    display: block;
+  color: #333; /* RGB */
     font-family: "BIZ UDゴシック";
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 1.4;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 li {
     list-style: none;
 }
 .section { 
     padding: 32px 16px;
-
+    /*@media(min-width: 650px) {
+        padding: 92px 0;
+    }*/
 }
 .title {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     text-align: center;
     font-family: "BIZ UD明朝";
+    margin: 0;
 }
 .section-contents {
-    margin: 50px 0;
+    margin-top: 48px;
     padding: 0;
 }
 .section-contents li {
+    background-color: #fff;
+    border-radius: 8px;
     margin: 0 auto;
+    padding-bottom: 16px;
     width: 100%;
-    display: block;
 }
 .section-contents li:nth-of-type(2), .section-contents li:nth-of-type(3) {
     margin: 24px auto;
     width: 100%;
-    display: block;
+}
+.section-contents01__images {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.section-contents01__title {
+    font-size: 1.6rem;
+    margin: 16px  16px 0  16px;
 }
 .section-contents01__image {
     width: 100%;
-    margin: 0;
     border-radius: 8px 8px 0 0;
 }
 .section-contents01__descriotion {
-    background-color: #fff;
-    padding: 10px 15px;
-    margin: 0;
-    border-radius:0 0 8px 8px;
-}
-.section-contents01__descriotion h2 {
-    margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    margin: 16px;
 }
 .section-contents01__descriotion p {
-    font-size: 1.6rem;
-    line-height: 1.4;
 }
-@media(min-width: 960px) {
-    
-    .section {
-        margin: 92px 0;
+@media(min-width: 800px) {
+    .section { 
+        padding: 92px 0;
+    }
+    .title {
+        font-size: 2.4rem;
     }
     .section-contents {
         display: flex;
-        margin: 64px 0;
+        margin: 64px auto 0;
+        max-width: 1040px;
     }
     .section-contents li:nth-of-type(2), .section-contents li:nth-of-type(3) {
-        margin: 0 auto;
+        margin: 0 0 0 40px;
+    }
+    .section-contents01__descriotion h2 {
+        font-size: 1.8rem;
+    }
+    .section-contents01__descriotion p {
+        font-size: 1.6rem;
     }
 }
